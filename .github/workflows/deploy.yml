@@ -20,17 +20,26 @@ jobs:
         with:
           node-version: 20
 
-      # 3. 安装依赖并构建
-      - name: Install and Build
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 4. 构建项目
+      - name: Build project
+        run: npm run build
+
+      # 5. 检查构建输出
+      - name: Check build output
         run: |
-          npm install
-          npm run build
-       # 创建或更新 CNAME 文件
+          echo "Build output:"
+          ls -R dist # 列出 dist 目录下的所有文件，确保所有文件都已生成
+
+      # 6. 创建或更新 CNAME 文件
       - name: Create or Update CNAME file
         run: |
           echo "ww1.ny3a.com" > dist/CNAME
 
-      # 4. 部署到 GitHub Pages
+      # 7. 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
