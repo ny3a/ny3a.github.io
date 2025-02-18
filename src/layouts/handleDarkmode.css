@@ -1,0 +1,46 @@
+.background{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.background.light {
+    @apply bg-gray-200
+}
+.background.dark {
+    @apply bg-gray-700
+}
+.sidebar {
+    @apply flex grow flex-col gap-y-5 overflow-y-auto px-6 pb-4
+}
+.sidebar.light{
+    @apply bg-blue-500 text-gray-200
+}
+.sidebar.dark{
+    @apply bg-blue-950 text-gray-200
+}
+.sidebarMenuActive, .sidebarMenuHover {
+    @apply flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold
+}
+.sidebarMenuActive.light {
+    @apply bg-blue-600 text-gray-200;
+}
+.sidebarMenuActive.dark {
+    @apply bg-blue-900 text-gray-200;
+}
+.sidebarMenuHover.light {
+    @apply hover:bg-blue-600 hover:text-gray-200
+}
+.sidebarMenuHover.dark {
+    @apply hover:bg-blue-900 hover:text-gray-200
+}
+.sidebarDarkMode{
+    @apply -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-indigo-200 hover:bg-blue-600 hover:text-white
+}
+.header{
+    @apply sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8
+}
+.header.light{
+    @apply bg-white
+}
+.header.dark{
+    @apply bg-gray-600 text-gray-200
+}
