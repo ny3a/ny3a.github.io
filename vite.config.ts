@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue(),requireTransform({
     fileRegex: /.js$|.ts$|.vue$/
   })],
-  base: '/'
+  base: '/ny3a.github.io/'
   // build: {
   //   rollupOptions: {
   //     external: [/\.json$/]
